@@ -34,9 +34,6 @@ class ViewController: UIViewController {
         
         countLabel.text = tapString;
         
-        if(txtText1.text != ""){
-            countLabel.text = txtText1.text;
-        }
         
         print(txtText1);
         print(txtText1.text!);
@@ -55,6 +52,17 @@ class ViewController: UIViewController {
     @IBAction func coolTapped(_ sender: Any) {
         
         test3Label.text = "Cool Button has been Pushed!";
+        
+        if(txtText1.text != "" && txtText2.text != "" ){
+            
+            var result : Double;
+            result = Double(txtText1.text!)! + Double(txtText2.text!)!;
+            
+            test3Label.text = String(result);
+            
+            // or you can do it like this :
+            test3Label.text = "The result is : \(result)";
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
