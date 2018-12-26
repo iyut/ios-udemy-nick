@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     
+    @IBOutlet weak var txtText1: UITextField!
+    
+    
+    @IBOutlet weak var txtText2: UITextField!
+    
+    
+    
     var tapCount = 0;
     var tapString : String = "";
     
@@ -26,6 +33,13 @@ class ViewController: UIViewController {
         tapString = "tap count: " + String(tapCount);
         
         countLabel.text = tapString;
+        
+        if(txtText1.text != ""){
+            countLabel.text = txtText1.text;
+        }
+        
+        print(txtText1);
+        print(txtText1.text!);
         
     }
     @IBAction func buttonTapped(_ sender: Any) {
