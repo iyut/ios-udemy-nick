@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var test3Label: UILabel!
     
     @IBOutlet weak var countLabel: UILabel!
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     
     
-    var tapCount = 0;
+    var tapCount :Int = 0;
     var tapString : String = "";
     
     @IBAction func buttonCount(_ sender: Any) {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         print("button pushed");
         
     }
-
+    
     @IBAction func coolTapped(_ sender: Any) {
         
         test3Label.text = "Cool Button has been Pushed!";
@@ -70,12 +70,12 @@ class ViewController: UIViewController {
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
